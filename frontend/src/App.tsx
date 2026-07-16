@@ -1,7 +1,9 @@
 function App() {
   return (
-    <div>
-      <h1>Hospital CMS</h1>
+    <div className="flex min-h-screen items-center justify-center bg-slate-950">
+      <h1 className="text-4xl font-bold text-white">
+        Hospital CMS 🚀
+      </h1>
     </div>
   );
 }
