@@ -1,10 +1,10 @@
+import { Button } from "@/components/ui/button";
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-950">
-      <h1 className="text-4xl font-bold text-white">
-        Hospital CMS 🚀
-      </h1>
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-slate-100">
+      <Button>Hospital CMS 🚀</Button>
+    </main>
   );
 }
 
