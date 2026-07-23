@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 
-export default function Login() {
+export default function ForgotPassword() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4 py-10">
       <div className="w-full max-w-md">
@@ -17,11 +22,12 @@ export default function Login() {
             </div>
 
             <CardTitle className="text-3xl font-bold text-slate-900">
-              Welcome Back
+              Forgot Password
             </CardTitle>
 
             <CardDescription className="text-slate-600">
-              Sign in to access your Hospital CMS dashboard.
+              Enter your registered email address and we'll send you a password
+              reset link.
             </CardDescription>
           </CardHeader>
 
@@ -38,39 +44,8 @@ export default function Login() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="Enter your password"
-                  autoComplete="current-password"
-                />
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <Checkbox id="remember" />
-
-                  <Label
-                    htmlFor="remember"
-                    className="cursor-pointer text-sm font-normal"
-                  >
-                    Remember Me
-                  </Label>
-                </div>
-
-                <Link
-                  to="/forgot-password"
-                  className="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700 hover:underline"
-                >
-                  Forgot Password?
-                </Link>
-              </div>
-
               <Button className="w-full" size="lg">
-                Login
+                Send Reset Link
               </Button>
             </form>
 
@@ -79,12 +54,12 @@ export default function Login() {
             </div>
 
             <p className="text-center text-sm text-slate-600">
-              Don't have an account?{" "}
+              Remember your password?{" "}
               <Link
-                to="/register"
+                to="/login"
                 className="font-semibold text-blue-600 transition-colors hover:text-blue-700 hover:underline"
               >
-                Create Account
+                Back to Login
               </Link>
             </p>
           </CardContent>
